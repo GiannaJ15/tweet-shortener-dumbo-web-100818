@@ -25,4 +25,4 @@ shortenedtweet << tweet.split(" ").map do |word|
   shortenedtweet.join(" ")
   end
   
-  
+  def bulk_tweet_shortener (tweetarray)
