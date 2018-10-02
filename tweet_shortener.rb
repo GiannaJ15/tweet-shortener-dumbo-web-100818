@@ -38,20 +38,18 @@ def bulk_tweet_shortener (tweetarray)
     end
   end 
  
- def selective_tweet_shortener(tweetarray)
-  tweetarray.collect do |tweet|
-    if tweet.length > 140 
-      shortenedtweet= []
-      shortenedtweet << tweet.split(" ").map do |word|
-         if dictionary.has_key?(word.downcase)
-             word = dictionary[word.downcase]
-          else word = word 
-           end
-          end
-           puts shortenedtweet.join(" ")
-    else puts tweet 
-    end 
-  end 
+ def selective_tweet_shortener(tweet)
+  if tweet > 140 
+  shortenedtweet= []
+  shortenedtweet << tweet.split(" ").map do |word|
+    if dictionary.has_key?(word)
+      word = dictionary[word]
+    else word = word 
+  end
+  end
+  puts shortenedtweet.join(" ")
+else puts tweet 
+end 
 end 
   
   
