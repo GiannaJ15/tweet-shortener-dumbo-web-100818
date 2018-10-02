@@ -15,4 +15,13 @@ def dictionary
   end 
   
  def word_substituter (tweet)
-   tweetarray = tweet.to_a
+   def word_substituter (tweet)
+shortenedtweet= []
+shortenedtweet << tweet.split(" ").map do |word|
+  if dictionary.has_key?(word)
+      word = dictionary[word]
+    else word = word 
+  end
+  end
+  shortenedtweet.join(" ")
+  end
