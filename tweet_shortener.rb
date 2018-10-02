@@ -49,9 +49,7 @@ def bulk_tweet_shortener (tweetarray)
            end
           end
            puts shortenedtweet.join(" ")
-           end
-    else 
-      puts tweet 
+    else puts tweet 
     end 
   end 
 end 
