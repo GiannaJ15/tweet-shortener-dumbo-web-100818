@@ -30,7 +30,7 @@ shortenedtweet << tweet.split(" ").map do |word|
     shortenedtweet= []
     shortenedtweet << tweet.split(" ").map do |word|
     if dictionary.has_key?(word.downcase)
-      word.downcase = dictionary[word.downcase]
+      word = dictionary[word.downcase]
     else word = word 
     end
     end
