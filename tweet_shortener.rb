@@ -46,4 +46,6 @@ def bulk_tweet_shortener (tweetarray)
  end 
  end 
   
+  def shortened_tweet_truncator(tweet)
+    
   
