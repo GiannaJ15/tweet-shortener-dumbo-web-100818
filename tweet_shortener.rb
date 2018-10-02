@@ -36,6 +36,8 @@ shortenedtweet << tweet.split(" ").map do |word|
     end
     puts shortenedtweet.join(" ")
     end
+  end 
+end 
   
   
   
