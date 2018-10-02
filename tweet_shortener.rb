@@ -14,7 +14,7 @@ def dictionary
     }
   end 
   
- def word_substituter (tweet)
+def word_substituter (tweet)
 shortenedtweet= []
 shortenedtweet << tweet.split(" ").map do |word|
   if dictionary.has_key?(word)
@@ -25,7 +25,7 @@ shortenedtweet << tweet.split(" ").map do |word|
   shortenedtweet.join(" ")
   end
   
-  def bulk_tweet_shortener (tweetarray)
+def bulk_tweet_shortener (tweetarray)
   tweetarray.collect do |tweet|
     shortenedtweet= []
     shortenedtweet << tweet.split(" ").map do |word|
@@ -38,8 +38,23 @@ shortenedtweet << tweet.split(" ").map do |word|
     end
   end 
  
-  
-  
+ def selective_tweet_shortener(tweetarray)
+  tweetarray.collect do |tweet|
+    if tweet.length > 140 
+      shortenedtweet= []
+      shortenedtweet << tweet.split(" ").map do |word|
+         if dictionary.has_key?(word.downcase)
+             word = dictionary[word.downcase]
+          else word = word 
+           end
+          end
+           puts shortenedtweet.join(" ")
+           end
+    else 
+      puts tweet 
+    end 
+  end 
+end 
   
   
   
