@@ -39,7 +39,7 @@ def bulk_tweet_shortener (tweetarray)
   end 
  
  def selective_tweet_shortener(tweet)
-  if tweet > 140 
+  if tweet.length > 140 
   shortenedtweet= []
   shortenedtweet << tweet.split(" ").map do |word|
     if dictionary.has_key?(word)
