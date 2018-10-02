@@ -28,12 +28,16 @@ shortenedtweet << tweet.split(" ").map do |word|
   def bulk_tweet_shortener (tweetarray)
   tweetarray.collect do |tweet|
     shortenedtweet= []
-    shortenedtweet << tweet.split(" ").map do |word|
-    if dictionary.has_key?(word)
-      word = dictionary[word]
+    shortenedtweet << tweet.split(" ").map do |word.downcase|
+    if dictionary.has_key?(word.downcase)
+      word.downcase = dictionary[word.downcase]
     else word = word 
     end
     end
     puts shortenedtweet.join(" ")
     end
   end 
+  
+  
+  
+  
