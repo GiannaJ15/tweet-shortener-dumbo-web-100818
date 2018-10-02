@@ -15,7 +15,6 @@ def dictionary
   end 
   
  def word_substituter (tweet)
-   def word_substituter (tweet)
 shortenedtweet= []
 shortenedtweet << tweet.split(" ").map do |word|
   if dictionary.has_key?(word)
