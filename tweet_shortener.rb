@@ -26,3 +26,14 @@ shortenedtweet << tweet.split(" ").map do |word|
   end
   
   def bulk_tweet_shortener (tweetarray)
+  tweetarray.collect do |tweet|
+    shortenedtweet= []
+    shortenedtweet << tweet.split(" ").map do |word|
+    if dictionary.has_key?(word)
+      word = dictionary[word]
+    else word = word 
+    end
+    end
+    puts shortenedtweet.join(" ")
+    end
+  end 
