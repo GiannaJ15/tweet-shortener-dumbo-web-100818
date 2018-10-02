@@ -24,3 +24,5 @@ shortenedtweet << tweet.split(" ").map do |word|
   end
   shortenedtweet.join(" ")
   end
+  
+  
